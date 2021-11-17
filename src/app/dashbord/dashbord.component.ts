@@ -2,6 +2,7 @@ import { DataSource } from '@angular/cdk/collections';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { DataService } from '../data.service';
+import { Post } from '../Interfaces/post';
 
 @Component({
   selector: 'app-dashbord',
@@ -19,7 +20,6 @@ export class DashbordComponent implements OnInit {
   }
 
 }
-
 export class PostDataSource extends DataSource<any> {
   constructor(private dataService:DataService){
     super();
