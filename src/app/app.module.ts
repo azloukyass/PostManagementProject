@@ -9,6 +9,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
 import { DataService } from './data.service';
+import { AuthService } from './authService';
+import { PostDialogComponent } from './post-dialog/post-dialog.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,15 +19,17 @@ import { DataService } from './data.service';
     AppComponent,
     WelcomeComponent,
     DashbordComponent,
+    PostDialogComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule
   ],
-  providers: [DataService],
+  providers: [DataService , AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
